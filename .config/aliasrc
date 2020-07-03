@@ -1,0 +1,18 @@
+#!/bin/sh
+
+alias v="nvim"
+alias ll="ls -al --color=auto"
+alias rm="rm -vI"
+alias mv="mv -iv"
+alias cp="cp -iv"
+alias mkd="mkdir -pv"
+
+# git
+alias g="git"
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gcm="git checkout master"
+alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
+

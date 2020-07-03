@@ -1,0 +1,3 @@
+(sleep 1 && xcompmgr) &
+setbg &
+xrdb -merge ~/.config/Xresources &
