@@ -1,3 +1,4 @@
 (sleep 1 && xcompmgr) &
+nm-applet &
 setbg &
 xrdb -merge ~/.config/Xresources &
