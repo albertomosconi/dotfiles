@@ -9,7 +9,7 @@
     separator_height = 2
     padding = 10
     horizontal_padding = 8
-    frame_width = 2
+    frame_width = 1
     frame_color = "#9faab8"
 
     # Define a color for the separator.
@@ -24,7 +24,7 @@
     sort = yes
 
     idle_threshold = 120
-    font = Monospace 11
+    font = Monospace 10
     line_height = 0
     markup = full
 
