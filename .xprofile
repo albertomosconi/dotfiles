@@ -4,3 +4,4 @@ nm-applet &
 blueman-applet &
 setbg &
 xrdb -merge ~/.config/Xresources &
+dunst &
