@@ -1,7 +1,7 @@
 #!/bin/sh
 
 alias v="nvim"
-alias ll="ls -al --color=auto"
+alias ll="ls -al --color=auto --group-directories-first"
 alias rm="rm -vI"
 alias mv="mv -iv"
 alias cp="cp -iv"
