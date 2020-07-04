@@ -4,8 +4,8 @@
 # Location of link to wallpaper link.
 bgloc="$HOME/media/images/wallpaper"
 
-[ -f "$1" ] && ln -sf "$(readlink -f "$1")" "$bgloc" && notify-send -u low "Changing background..."
-[ -d "$1" ] && ln -sf "$(find "$(readlink -f "$1")" -iregex '.*.\(jpg\|jpeg\|png\|gif\)' -type f | shuf -n 1)" "$bgloc" && notify-send -u low "Applying random background..."
+[ -f "$1" ] && ln -sf "$(readlink -f "$1")" "$bgloc" && notify-send -u low "Background changed" "wallpaper set to ${1##*/}"
+[ -d "$1" ] && ln -sf "$(find "$(readlink -f "$1")" -iregex '.*.\(jpg\|jpeg\|png\|gif\)' -type f | shuf -n 1)" "$bgloc" && img="$(readlink -f "$bgloc")" && notify-send -u low "Background changed" "Selected ${img##*/} from ${img%/*}"
 
 # wal -i "$(readlink -f "$bgloc")"
 
