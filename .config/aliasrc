@@ -21,3 +21,7 @@ alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 alias e="$EDITOR"
 alias v="$EDITOR"
 alias b="$BROWSER"
+
+# directories
+alias sd="$HOME/.local/bin"
+alias im="$HOME/media/images"
