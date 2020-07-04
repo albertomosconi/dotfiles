@@ -1,13 +1,16 @@
 #!/bin/sh
 # spawns a dmenu prompt asking to choose between shutdown, reboot, logout or abort
 
+# load xresources colors
+. "$XDG_CACHE_HOME/wal/colors.sh"
+
 choices="cancel\npoweroff\nreboot\nlogout"
 
-chosen=$(echo -e "$choices" | dmenu -nb black -sb darkred -sf white -nf gray -i -p "How do you want to quit?")
+chosen=$(echo -e "$choices" | dmenu -nb $color0 -sb $color9 -sf white -nf gray -i -p "How do you want to quit?")
 
 case "$chosen" in
 	poweroff) poweroff;;
 	reboot) reboot;;
-	logout) st -e echo logout;;
-	abort) ;;
+	logout) killall Xorg;;
+	cancel) ;;
 esac
