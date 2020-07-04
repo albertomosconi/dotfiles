@@ -10,6 +10,7 @@ alias mkd="mkdir -pv"
 
 # git
 alias g="git"
+alias gb="git branch"
 alias gs="git status"
 alias ga="git add"
 alias gc="git commit -m"
