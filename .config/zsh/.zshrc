@@ -12,8 +12,7 @@ compinit -d ${XDG_CACHE_HOME}/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
 
 autoload -U colors && colors
-PS1="%B%{$fg[green]%}%~%{$reset_color%}%B "
-PS1="%B%0(?.$fg[green].$fg[red])%T %{$fg[yellow]%}%~ %{$reset_color%}"
+PS1="%B%(0?.%F{green}.%F{red})%T %F{blue}%~%f "
 stty stop undef
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
