@@ -1,0 +1,13 @@
+#!/bin/sh
+# spawns a dmenu prompt asking to choose between shutdown, reboot, logout or abort
+
+choices="cancel\npoweroff\nreboot\nlogout"
+
+chosen=$(echo -e "$choices" | dmenu -nb black -sb darkred -sf white -nf gray -i -p "How do you want to quit?")
+
+case "$chosen" in
+	poweroff) poweroff;;
+	reboot) reboot;;
+	logout) st -e echo logout;;
+	abort) ;;
+esac
