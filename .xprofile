@@ -1,7 +1,6 @@
 (sleep 1 && xcompmgr) &
 slstatus &
 nm-applet &
-blueman-applet &
 setbg &
 xrdb -merge ~/.config/Xresources &
 dunst &
