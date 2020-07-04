@@ -2,6 +2,7 @@
 
 alias v="nvim"
 alias ll="ls -al --color=auto --group-directories-first"
+alias grep="grep --color=auto"
 alias rm="rm -vI"
 alias mv="mv -iv"
 alias cp="cp -iv"
@@ -16,3 +17,7 @@ alias gp="git push"
 alias gcm="git checkout master"
 alias config="/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME"
 
+# other
+alias e="$EDITOR"
+alias v="$EDITOR"
+alias b="$BROWSER"
