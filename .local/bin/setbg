@@ -4,9 +4,20 @@
 # Location of link to wallpaper link.
 bgloc="$HOME/media/images/wallpaper"
 
+with_pywal=true
+if [[ $1 = "-s" ]]; then
+	with_pywal=false
+	shift
+fi
+
 [ -f "$1" ] && ln -sf "$(readlink -f "$1")" "$bgloc" && notify-send -i "$bgloc" -u low "Background updated" "wallpaper set to ${1##*/}"
 [ -d "$1" ] && ln -sf "$(find "$(readlink -f "$1")" -iregex '.*.\(jpg\|jpeg\|png\|gif\)' -type f | shuf -n 1)" "$bgloc" && img="$(readlink -f "$bgloc")" && notify-send -i "$bgloc" -u low "Background updated" "Selected ${img##*/} from ${img%/*}"
 
-wal -i "$(readlink -f "$bgloc")"
+if [ "$with_pywal" = true ]; then
+	echo "Generating color scheme with Pywal..."
+	wal -i "$(readlink -f "$bgloc")"
+fi
 
+echo "Applying wallpaper..."
 xwallpaper --zoom "$bgloc"
+echo "Done."
