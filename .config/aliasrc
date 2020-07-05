@@ -25,4 +25,5 @@ alias b="$BROWSER"
 
 # directories
 alias sd="$HOME/.local/bin"
+alias sds="$HOME/.local/bin/status"
 alias im="$HOME/media/images"
