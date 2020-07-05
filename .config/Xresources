@@ -10,51 +10,89 @@
 
 
 !! appearance
-*.alpha:		0.95
+*.alpha:		0.9
 *.linespace:		1
-*.font:			monospace:style=Regular:size=10
-*.boldFont:		monospace:style=Bold:size=10
-*.italicFont:		monospace:style=Italic:size=10
-*.boldItalicFont:	monospace:style=Bold Italic:size=10
+*.font:			firamono:style=Regular:size=10
+*.boldFont:		firamono:style=Bold:size=10
+*.italicFont:		firamono:style=Italic:size=10
+*.boldItalicFont:	firamono:style=Bold Italic:size=10
 *.scrollbar:		false
 *.internalBorder:	26
 
-!! flat retro
-*.foreground:	#9faab8
-*.background:	#232731
-*.cursorColor:	#9faab8
+! special
+*.foreground:   #e8dfd6
+*.background:   #021b21
+*.cursorColor:  #e8dfd6
 
 ! black
-*.color0:	#232731
-*.color8:	#6f798c
+*.color0:       #032c36
+*.color8:       #065f73
 
 ! red
-*.color1:	#a65f69
-*.color9:	#a65f69
+*.color1:       #c2454e
+*.color9:       #ef5847
 
 ! green
-*.color2:	#3b8563
-*.color10:	#3b8563
+*.color2:       #7cbf9e
+*.color10:      #a2d9b1
 
 ! yellow
-*.color3:       #b39669
-*.color11:      #b39669
+*.color3:       #8a7a63
+*.color11:      #beb090
 
 ! blue
-*.color4:       #487799
-*.color12:      #487799
+*.color4:       #2e3340
+*.color12:      #61778d
 
 ! magenta
-*.color5:       #b9637e
-*.color13:      #b9637e
+*.color5:       #ff5879
+*.color13:      #ff99a1
 
 ! cyan
-*.color6:       #348396
-*.color14:      #348396
+*.color6:       #44b5b1
+*.color14:      #9ed9d8
 
 ! white
-*.color7:       #9faab8
-*.color15:      #6f798c
+*.color7:       #f2f1b9
+*.color15:      #f6f6c9
+
+
+!! flat retro
+//*.foreground:	#9faab8
+//*.background:	#232731
+//*.cursorColor:	#9faab8
+//
+//! black
+//*.color0:	#232731
+//*.color8:	#6f798c
+//
+//! red
+//*.color1:	#a65f69
+//*.color9:	#a65f69
+//
+//! green
+//*.color2:	#3b8563
+//*.color10:	#3b8563
+//
+//! yellow
+//*.color3:       #b39669
+//*.color11:      #b39669
+//
+//! blue
+//*.color4:       #487799
+//*.color12:      #487799
+//
+//! magenta
+//*.color5:       #b9637e
+//*.color13:      #b9637e
+//
+//! cyan
+//*.color6:       #348396
+//*.color14:      #348396
+//
+//! white
+//*.color7:       #9faab8
+//*.color15:      #6f798c
 
 
 !! gruvbox: 
