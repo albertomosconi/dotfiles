@@ -1,5 +1,17 @@
 #!/bin/sh
 
+#Prints the current volume or 🔇 if muted.
+
+case $BLOCK_BUTTON in
+	1) setsid -f "$TERMINAL" -e pulsemixer ;; 
+    2) pamixer -t && kill -44 "$(pidof dwmblocks)";;
+    4) pamixer --allow-boost -i 1 && kill -44 "$(pidof dwmblocks)";;
+    5) pamixer --allow-boost -d 1 && kill -44 "$(pidof dwmblocks)";;
+	3) notify-send "Volume module" "\- Middle click to mute.
+- Scroll to change." ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
 [ "$(pamixer --get-mute)" = true ] && echo [vol]mute && exit
 
 vol="$(pamixer --get-volume)"
