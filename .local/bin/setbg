@@ -16,8 +16,12 @@ fi
 if [ "$with_pywal" = true ]; then
 	echo "Generating color scheme with Pywal..."
 	wal -i "$(readlink -f "$bgloc")"
+else
+    echo "Applying default color scheme..."
+    xrdb -merge "$HOME/.config/Xresources"
 fi
 
+xfirefox
 echo "Applying wallpaper..."
 xwallpaper --zoom "$bgloc"
 echo "Done."
