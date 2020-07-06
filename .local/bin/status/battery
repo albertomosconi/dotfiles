@@ -1,14 +1,24 @@
 #!/bin/sh
 # copied from Luke Smith
 
+case $BLOCK_BUTTON in
+	3) notify-send "Battery module" " discharging
+ not charging
+ stagnant charge
+ charging
+ charged
+ critical" ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
 for battery in /sys/class/power_supply/BAT?
 do
 	# get remaining capacity and status
 	capacity=$(cat "$battery"/capacity 2>/dev/null) || break
-	status=$(sed "s/[Dd]ischarging/\[-\]/;s/[Nn]ot charging/\[x\]/;s/[Cc]harging/\[\+\]/;s/[Uu]nknown/\[\?\]/;s/[Ff]ull/\[o\]/" "$battery"/status)
+	status=$(sed "s/[Dd]ischarging/ /;s/[Nn]ot charging/ /;s/[Cc]harging/ /;s/[Uu]nknown/ /;s/[Ff]ull/ /" "$battery"/status)
 
 	# if discharging and < 25% add warning
-	[ "$capacity" -le 25 ] && [ "$status" = "Discharging" ] && warn=" !! "
+	[ "$capacity" -le 25 ] && [ "$status" = "Discharging" ] && warn=" "
 
 	printf "%s%s%s%%" "$status" "$warn" "$capacity"
 	unset warn
