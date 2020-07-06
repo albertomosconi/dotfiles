@@ -10,6 +10,6 @@ do
 	# if discharging and < 25% add warning
 	[ "$capacity" -le 25 ] && [ "$status" = "Discharging" ] && warn=" !! "
 
-	printf "%s%s%s%%%%" "$status" "$warn" "$capacity"
+	printf "%s%s%s%%" "$status" "$warn" "$capacity"
 	unset warn
 done | sed "s/ *$//"
