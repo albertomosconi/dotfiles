@@ -1,0 +1,3 @@
+#!/bin/sh
+
+list= "$(nmcli -c yes -f SSID d wifi list)"
