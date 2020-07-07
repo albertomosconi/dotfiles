@@ -11,5 +11,5 @@ esac
 
 # ([day of year], [day of week])[month]-[day of month] [hour]:[min]
 # ex. (187, Sun)Jul-05 09:04
-date "+ %j,%a-%d  %R"
+date "+:%j,%a-%d :%R"
 
