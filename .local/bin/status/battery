@@ -15,7 +15,7 @@ for battery in /sys/class/power_supply/BAT?
 do
 	# get remaining capacity and status
 	capacity=$(cat "$battery"/capacity 2>/dev/null) || break
-	status=$(sed "s/[Dd]ischarging//;s/[Nn]ot charging/ /;s/[Cc]harging/ /;s/[Uu]nknown/ /;s/[Ff]ull/ /" "$battery"/status)
+	status=$(sed "s/[Dd]ischarging//;s/[Nn]ot charging//;s/[Cc]harging//;s/[Uu]nknown//;s/[Ff]ull//" "$battery"/status)
 
 	# if discharging and < 25% add warning
 	[ "$capacity" -le 15 ] && [ "$status" = "" ] && warn="" && notify-send -u critical "Battery low" "Connect a charger!"
