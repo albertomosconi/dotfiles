@@ -1,5 +1,4 @@
 (sleep 1 && xcompmgr) &
 dwmblocks &
-#nm-applet &
-setbg -s &
 dunst &
+setbg &
