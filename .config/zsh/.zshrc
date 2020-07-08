@@ -7,6 +7,11 @@ export KEYTIMEOUT=1
 
 autoload -Uz compinit
 zstyle ':completion:*' menu select
+# case insensitive path-completion
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]} l:|=* r:|=*'
+# partial completion suggestions
+zstyle ':completion:*' list-suffixes
+zstyle ':completion:*' expand prefix suffix
 zmodload zsh/complist
 compinit -d ${XDG_CACHE_HOME}/zsh/zcompdump-$ZSH_VERSION
 _comp_options+=(globdots)
