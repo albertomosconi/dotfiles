@@ -23,7 +23,7 @@ else
 fi
 
 xdotool key super+F5
-# xfirefox
+xfirefox
 echo "Applying wallpaper..."
 xwallpaper --zoom "$bgloc"
 echo "Done."
