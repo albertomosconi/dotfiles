@@ -10,10 +10,10 @@
 
 
 !! appearance
-*.alpha:		0.9
+*.alpha:		    0.9
 *.linespace:		1
-*.font:			firamono:style=Regular:size=10
-*.boldFont:		firamono:style=Bold:size=10
+*.font:			    firamono:style=Regular:size=9
+*.boldFont:		    firamono:style=Bold:size=10
 *.italicFont:		firamono:style=Italic:size=10
 *.boldItalicFont:	firamono:style=Bold Italic:size=10
 *.scrollbar:		false
