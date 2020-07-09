@@ -26,8 +26,6 @@ color15=$(xrdb -query | awk '/^\*.color15:/  {print $2}')
 # FIREFOX CSS
 cat > "$CSS" <<-EOCFG
 :root {
-  --bg: $bg;
-  --fg: $fg;
   --blk: $color0;
   --red: $color1;
   --grn: $color2;
