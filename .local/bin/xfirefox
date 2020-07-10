@@ -1,7 +1,7 @@
 #!/bin/sh
 # Exports the .Xresources colors to a CSS file format (used with UserChrome.css or Stylish),
 
-CSS=$XDG_CACHE_HOME/homepage/colors.css
+CSS=$HOME/.mozilla/firefox/e1qvoz2j.default-release/chrome/patches/colors.css
 
 # grab colors from .Xresources
 bg=$(xrdb -query | awk '/background/ {print $2}')
