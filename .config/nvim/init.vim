@@ -7,7 +7,7 @@ set encoding=utf-8			" encoding displayed
 set fileencoding=utf-8
 set number relativenumber	" shows line numbers on the left relative to cursor position
 set hidden	    			" required to keep multiple buffers open
-set nowrap	    			" no screen wrapping
+"set nowrap	    			" no screen wrapping
 set pumheight=10			" popup menu height smaller
 set ruler	    			" always show cursor position
 set cmdheight=2				" more space for displaying messages
