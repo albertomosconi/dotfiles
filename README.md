@@ -1,2 +1,12 @@
-# Dotfiles for Arch Linux with dwm.
-greatly inspired by Luke Smith on youtube
+# Personal dotfiles for linux
+[www.albertomosconi.it](https://www.albertomosconi.it "Alberto Mosconi")  
+I have taken a lot of inspiration from [Luke Smith](https://www.github.com/lukesmithxyz "Luke Smith")
+
+- scripts are in `~/.local/bin/`
+- program configurations are in `~/.config/`
+
+## Installation
+Clone this repository in your home folder.  
+```
+git clone https://github.com/albertomosconi/dotfiles.git  
+```
