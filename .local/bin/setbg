@@ -18,12 +18,12 @@ xrdb -merge "$HOME/.config/Xresources"
 if [ "$with_pywal" = true ]; then
 	echo "Generating color scheme with Pywal..."
 	wal -i "$(readlink -f "$bgloc")"
+    pywalfox update
 else
     echo "Applying default color scheme..."
 fi
 
 xdotool key super+F5
-xfirefox
 echo "Applying wallpaper..."
 xwallpaper --zoom "$bgloc"
 echo "Done."
