@@ -1,4 +1,4 @@
-(sleep 1 && xcompmgr) &
+(sleep 1 && picom) &
 dwmblocks &
 dunst &
 setbg &
