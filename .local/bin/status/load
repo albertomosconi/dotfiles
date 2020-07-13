@@ -1,4 +1,9 @@
 #!/bin/sh
 
+case $BLOCK_BUTTON in
+    3) notify-send "Load Module" "Shows the current system average load" ;;
+    6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
 load="$(uptime | awk -F'average:' '{ print $2}' | sed s/,//g | awk '{print $2}')"
-echo " $load"
+echo ":$load"
