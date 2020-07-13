@@ -1,0 +1,4 @@
+#!/bin/sh
+
+load="$(uptime | awk -F'average:' '{ print $2}' | sed s/,//g | awk '{print $2}')"
+echo " $load"
