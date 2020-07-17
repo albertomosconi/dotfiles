@@ -7,7 +7,7 @@ color9="darkred"
 # load xresources colors
 . "${XDG_CACHE_HOME}/wal/colors.sh"
 
-chosen=$(printf "cancel\\npoweroff\\nreboot\\nlogout" | dmenu -fn "firamono:size=9" -nb "$color0" -sb "$color9" -sf white -nf gray -i -p "How do you want to quit?")
+chosen=$(printf "cancel\\npoweroff\\nreboot\\nlogout" | dmenu -fn "monospace:size=9" -nb "$color0" -sb "$color9" -sf white -nf gray -i -p "How do you want to quit?")
 
 case "$chosen" in
 	poweroff) poweroff;;
