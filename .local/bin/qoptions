@@ -12,6 +12,6 @@ chosen=$(printf "cancel\\npoweroff\\nreboot\\nlogout" | dmenu -fn "monospace:siz
 case "$chosen" in
 	poweroff) poweroff;;
 	reboot) reboot;;
-	logout) killall Xorg;;
+	logout) pkill -KILL -u alberto;;
 	cancel) ;;
 esac
