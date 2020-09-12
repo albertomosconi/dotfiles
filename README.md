@@ -1,4 +1,5 @@
-# Personal dotfiles for linux
+<h1 align="center">Personal dotfiles for Linux</h1>
+
 I have taken a lot of inspiration from [Luke Smith](https://www.github.com/lukesmithxyz "Luke Smith")
 
 - scripts are in  `~/.local/bin/`
