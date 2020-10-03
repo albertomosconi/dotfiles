@@ -1,4 +1,4 @@
-setbg &
+setbg -s &
 (sleep 1 && picom) &
 dwmblocks &
 dunst &
